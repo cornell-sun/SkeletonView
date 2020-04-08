@@ -72,17 +72,6 @@ public extension UIColor {
     static var silver       = UIColor(0xbdc3c7)
     static var asbestos     = UIColor(0x7f8c8d)
 
-    static var skeletonDefault: UIColor {
-        if #available(iOS 13, tvOS 13, *) {
-            return UIColor { traitCollection in
-                switch traitCollection.userInterfaceStyle {
-                case .dark: return .darkClouds
-                default: return .clouds
-                }
-            }
-        } else {
-            return .clouds
-        }
-    }
+    static var skeletonDefault = UIColor.clouds
 }
 // codebeat:enable[TOO_MANY_IVARS]
